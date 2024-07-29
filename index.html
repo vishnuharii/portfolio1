@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split Page with Header and Footer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Your Logo</div>
+    </header>
+    <div class="container">
+        <div class="left-side">
+            <section class="intro" id="intro">
+                <h1>Hi, I am <br><span>Vishnu Hari.</span><br>A web developer.</h1>
+                <p>I aim to create intuitive interfaces and meaningful user experiences, always striving to innovate and enhance my skills in this dynamic field.</p>
+            </section>
+        </div>
+        <div class="right-side">
+            <section class="overlay about">
+                <h2>About Me</h2>
+                <p>I am a passionate web developer currently studying at Humber College, where I focus on both front-end and back-end technologies. My interests extend to UI/UX design, where I strive to create intuitive and engaging interfaces.</p>
+            </section>
+            <section class="overlay skills">
+                <h2>Skills</h2>
+                <p>I possess strong skills in web development, with proficiency in HTML, CSS, and JavaScript, as well as experience with frameworks like React and Angular. My expertise extends to UI/UX design, utilizing tools like Figma and Adobe XD to create user-centered interfaces.</p>
+            </section>
+            <img src="images/hero.jpeg" alt="Hero Image">
+        </div>
+    </div>
+    <footer>
+        follow me
+    </footer>
+
+    <script>
+        // JavaScript to dynamically create a form
+        const leftSide = document.querySelector('.left-side');
+
+        // Create form element
+        const form = document.createElement('form');
+
+        // Create input for message
+        const messageInput = document.createElement('input');
+        messageInput.type = 'text';
+        messageInput.placeholder = 'Enter your message';
+        form.appendChild(messageInput);
+
+        // Create input for email
+        const emailInput = document.createElement('input');
+        emailInput.type = 'email';
+        emailInput.placeholder = 'Enter your email';
+        form.appendChild(emailInput);
+
+        // Create submit button
+        const submitButton = document.createElement('button');
+        submitButton.type = 'submit';
+        submitButton.textContent = 'Submit';
+        form.appendChild(submitButton);
+
+        // Append form to left-side container
+        leftSide.appendChild(form);
+    </script>
+</body>
+</html>
